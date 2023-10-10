@@ -7,10 +7,10 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
 
-public class Utils {
+public class Productaddexcel {
 	
 	public static String[][] Customerdata(String sheetname) throws Throwable {
-		File file = new File("./src/main/java/com/testdata/EHcredentials2.xlsx");
+		File file = new File("./src/main/java/com/testdata/productadd.xlsx");
 		FileInputStream stream = new FileInputStream(file);
 		XSSFWorkbook workbook = new XSSFWorkbook(stream);
 		XSSFSheet sheet = workbook.getSheet(sheetname);

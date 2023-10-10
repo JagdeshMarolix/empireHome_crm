@@ -24,10 +24,10 @@ public class Loginfunctionality extends Basetest {
    }
    
    
-   public void verifylogin() {
+   public void verifylogin(String username, String password) {
 	   
-	  userid.sendKeys(prop.getProperty("username")); 
-	   pass.sendKeys(prop.getProperty("password"));
+	  userid.sendKeys(username); 
+	   pass.sendKeys(password);
 	   loginbutton.click();
    }
    
