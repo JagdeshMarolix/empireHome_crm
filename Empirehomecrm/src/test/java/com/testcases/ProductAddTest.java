@@ -33,9 +33,9 @@ public class ProductAddTest extends Basetest {
 		
 	}
 	@Test(dataProvider = "dataload")
-	public void productValidation(String modelname, String itemtitle, String itemdescription) throws Throwable {
+	public void productValidation(String modelname, String itemtitle, String itemdescription, String height, String width, String breadth, String colorname, String actualprice, String Qty) throws Throwable {
 		login.OriginalLoginValidation();
-		itemsaddition.verifyProductAdd(modelname, itemtitle, itemdescription);
+		itemsaddition.verifyProductAdd(modelname, itemtitle, itemdescription, height, width, breadth, colorname, actualprice, Qty);
 		String urltest = driver.getCurrentUrl();
 		Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Inventory/All");
 	}
