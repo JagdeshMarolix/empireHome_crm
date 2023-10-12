@@ -1,10 +1,12 @@
 package com.pageobjects;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.Basetest;
+import com.utils.Utils;
 
 public class UserType extends Basetest {
 	@FindBy (xpath = "//span[@class='pe-7s-keypad']")
@@ -58,14 +60,26 @@ public class UserType extends Basetest {
 		
 		saveButton.click();
 		
-		driver.navigate().to("http://empirehome.myprojectsonline.co.in/Master/UserTypes");
+//		driver.navigate().to("http://empirehome.myprojectsonline.co.in/Master/UserTypes");
 		
+	
 		searchField.sendKeys(prop.getProperty("AddnewUser"));
+		searchField.sendKeys(Keys.ENTER);
+		Thread.sleep(3000);
 		
 		editUserButton.click();
+		Thread.sleep(3000);	
+				
+		Utils.actions(driver, addUserNameField);
+		addUserNameField.clear();
 		
-		userTypesButton.sendKeys(prop.getProperty("editUserType"));
+		addUserNameField.sendKeys(prop.getProperty("editUser"));
 		
+		Utils.actions(driver, addUserTypeField);
+		addUserTypeField.clear();
+		addUserTypeField.sendKeys(prop.getProperty("editUserType"));
+		
+		Thread.sleep(3000);
 		saveButton.click();
 		
 		
