@@ -8,6 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
 import com.base.Basetest;
+import com.utils.Utils;
 
 public class MoveTo extends Basetest {
 	@FindBy (xpath = "//span[@class='pe-7s-keypad']")
@@ -70,8 +71,9 @@ public class MoveTo extends Basetest {
 		NotesField.sendKeys(prop.getProperty("Notes"));
 		Thread.sleep(2000);
 		
-		Actions ac = new Actions(driver);
-		ac.moveToElement( modelNumberField).click().perform();
+		Utils.actions(driver, modelNumberField);
+//		ac.moveToElement( modelNumberField).click().perform();
+		
 		
 		textbox.sendKeys(prop.getProperty("ModelNumber"));
 		textbox.sendKeys(Keys.ENTER);
@@ -100,8 +102,9 @@ public class MoveTo extends Basetest {
 		NotesField.sendKeys(prop.getProperty("Notes"));
 		Thread.sleep(2000);
 		
+		Utils.actions(driver, modelNumberField);
 //		Actions ac = new Actions(driver);
-		ac.moveToElement( modelNumberField).click().perform();
+//		ac.moveToElement( modelNumberField).click().perform();
 		
 		textbox.sendKeys(prop.getProperty("ModelNumber"));
 		textbox.sendKeys(Keys.ENTER);

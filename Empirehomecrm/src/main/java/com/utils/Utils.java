@@ -5,6 +5,9 @@ import java.io.FileInputStream;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.DataProvider;
 
 public class Utils {
@@ -29,7 +32,10 @@ public class Utils {
 		return data;
 		
 	}
-
+public static void actions(WebDriver driver, WebElement element) {
+	Actions ac = new Actions(driver);
+	ac.moveToElement(element).click().perform();
+}
 	
 
 }
