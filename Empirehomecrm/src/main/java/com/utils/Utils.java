@@ -1,10 +1,12 @@
 package com.utils;
 import java.io.File;
 import java.io.FileInputStream;
+import java.sql.Driver;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -36,6 +38,11 @@ public static void actions(WebDriver driver, WebElement element) {
 	Actions ac = new Actions(driver);
 	ac.moveToElement(element).click().perform();
 }
+//public static void scroll(driver) {
+//	JavascriptExecutor js = (JavascriptExecutor) driver;
+//	js.executeScript("window.scrollBy(0,250)");
+//	
+//}
 	
 
 }

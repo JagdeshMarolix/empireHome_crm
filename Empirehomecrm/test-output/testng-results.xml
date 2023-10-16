@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-16T15:33:18 IST" name="Default suite" finished-at="2023-10-16T15:33:47 IST" duration-ms="29804">
+  <suite started-at="2023-10-16T18:45:55 IST" name="Default suite" finished-at="2023-10-16T18:46:04 IST" duration-ms="9321">
     <groups>
     </groups>
-    <test started-at="2023-10-16T15:33:18 IST" name="Default test" finished-at="2023-10-16T15:33:47 IST" duration-ms="29804">
-      <class name="com.testcases.HolidayTestCases">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.testcases.HolidayTestCases@7c7b252e]" started-at="2023-10-16T15:33:18 IST" name="setUp" finished-at="2023-10-16T15:33:23 IST" duration-ms="5596" status="PASS">
+    <test started-at="2023-10-16T18:45:55 IST" name="Default test" finished-at="2023-10-16T18:46:04 IST" duration-ms="9321">
+      <class name="com.testcases.LogOutTestCases">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:com.testcases.LogOutTestCases@7c7b252e]" started-at="2023-10-16T18:45:55 IST" name="Setup" finished-at="2023-10-16T18:46:00 IST" duration-ms="4934" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="HolidayFunctionalityValidation()[pri:0, instance:com.testcases.HolidayTestCases@7c7b252e]" started-at="2023-10-16T15:33:23 IST" name="HolidayFunctionalityValidation" finished-at="2023-10-16T15:33:47 IST" duration-ms="24132" status="PASS">
+        </test-method> <!-- Setup -->
+        <test-method signature="LogoutValidation()[pri:0, instance:com.testcases.LogOutTestCases@7c7b252e]" started-at="2023-10-16T18:46:00 IST" name="LogoutValidation" finished-at="2023-10-16T18:46:04 IST" duration-ms="4322" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HolidayFunctionalityValidation -->
-      </class> <!-- com.testcases.HolidayTestCases -->
+        </test-method> <!-- LogoutValidation -->
+      </class> <!-- com.testcases.LogOutTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
