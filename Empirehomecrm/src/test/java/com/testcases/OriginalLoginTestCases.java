@@ -30,7 +30,7 @@ public class OriginalLoginTestCases extends Basetest {
 	public void verifyLogin() {
 		ol.OriginalLoginValidation();
 		WebElement dashboardtext = driver.findElement(By.xpath("//h1[normalize-space()='CRM Admin Dashboard']"));
-		Assert.assertTrue(dashboardtext.isDisplayed(), "crm admin dashboard is visible on the dashboard");
+		Assert.assertTrue(dashboardtext.isDisplayed(), "Crm admin dashboard text is not visible on the homepage");
 //		String url = driver.getCurrentUrl();
 //		AssertJUnit.assertEquals(url, "http://empirehome.myprojectsonline.co.in/EmpireHome/Dashboard");
 		

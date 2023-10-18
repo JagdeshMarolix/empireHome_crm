@@ -38,7 +38,7 @@ public void LogoutValidation() throws Throwable {
 //	Assert.assertEquals(UsernameField.isdisplayed);
 	WebElement LoginText = driver.findElement(By.xpath("//h4[@class='text-center font-weight-bold mb-3']"));
 //	Assert.assertListContainsObject(username, "webpage contains username after a logout");
-	Assert.assertTrue(LoginText.isDisplayed(),"successfull logout");
+	Assert.assertTrue(LoginText.isDisplayed(),"unsuccesful logout for the application");
 	
 }
 }
