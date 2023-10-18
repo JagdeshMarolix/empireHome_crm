@@ -1,6 +1,9 @@
 package com.testcases;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 import org.testng.AssertJUnit;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
@@ -26,8 +29,10 @@ public class OriginalLoginTestCases extends Basetest {
 	@Test
 	public void verifyLogin() {
 		ol.OriginalLoginValidation();
-		String url = driver.getCurrentUrl();
-		AssertJUnit.assertEquals(url, "http://empirehome.myprojectsonline.co.in/EmpireHome/Dashboard");
+		WebElement dashboardtext = driver.findElement(By.xpath("//h1[normalize-space()='CRM Admin Dashboard']"));
+		Assert.assertTrue(dashboardtext.isDisplayed(), "crm admin dashboard is visible on the dashboard");
+//		String url = driver.getCurrentUrl();
+//		AssertJUnit.assertEquals(url, "http://empirehome.myprojectsonline.co.in/EmpireHome/Dashboard");
 		
 	}
 	@AfterMethod
