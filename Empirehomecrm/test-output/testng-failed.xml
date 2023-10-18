@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testcases.HolidayTestCases">
+      <class name="com.testcases.LogOutTestCases">
         <methods>
-          <include name="setUp"/>
-          <include name="HolidayFunctionalityValidation"/>
+          <include name="LogoutValidation"/>
+          <include name="Setup"/>
         </methods>
-      </class> <!-- com.testcases.HolidayTestCases -->
+      </class> <!-- com.testcases.LogOutTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

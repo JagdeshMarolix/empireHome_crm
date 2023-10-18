@@ -13,6 +13,9 @@ public class LogoutFunctionality extends Basetest{
 	@FindBy (xpath = "//a[normalize-space()='Signout']")
 	WebElement LogoutButton;
 	
+	@FindBy (xpath = "//input[@placeholder='example@gmail.com']")
+	WebElement UsernameField;
+	
 	
 	public LogoutFunctionality() {
 		PageFactory.initElements(driver, this);
