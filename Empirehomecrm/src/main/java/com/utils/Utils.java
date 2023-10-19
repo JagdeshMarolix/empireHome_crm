@@ -10,6 +10,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
 
 public class Utils {
@@ -43,6 +44,9 @@ public static void actions(WebDriver driver, WebElement element) {
 //	js.executeScript("window.scrollBy(0,250)");
 //	
 //}
-	
-
+public static void dropdowns(WebElement value, int index) {
+	Select sc = new Select(value);
+	sc.selectByIndex(index);
+}
+ 
 }

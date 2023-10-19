@@ -11,6 +11,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import com.base.Basetest;
+import com.utils.Utils;
 
 public class ProductAdd extends Basetest {
 @FindBy (xpath = "//span[@class='pe-7s-keypad']")
@@ -49,13 +50,13 @@ WebElement actualpriceField;
 @FindBy(xpath = "//*[@id=\"lobicard-custom-control1\"]/div[2]/form/div[1]/div[17]/div/span/span[1]/span")
 WebElement mrpFactorField;
 
-@FindBy (xpath = "//li[contains(text(), '1.00')]")
+@FindBy (xpath = "//li[contains(text(), '3.00')]")
 WebElement mrpFactorInput;
 
-@FindBy(xpath = "//input[@id='mrp']")
-WebElement mrppriceField;
+//@FindBy(xpath = "//input[@id='mrp']")
+//WebElement mrppriceField;
 
-@FindBy(xpath = "//input[@placeholder='Enter Qty ']")
+@FindBy(xpath = "//input[@placeholder='Enter Qty ']") ////span[@id='select2-factor-container']
 WebElement QtyField;
 
 @FindBy(xpath = "//input[@name='ProductMainImageUploaded']")
@@ -105,7 +106,9 @@ public void verifyProductAdd(String modelname, String itemtitle2, String itemdes
 //	Actions ac = new Actions(driver);
 //	ac.moveToElement(mrpFactorField);
 	
-//	mrpFactorinput.sendKeys("1.00");
+//	mrpFactorInput.sendKeys("3.00");
+//	mrpFactorInput.click();
+//	Thread.sleep(2000);
 	
 	mrpFactorField.click();
 	Thread.sleep(2000);
@@ -116,8 +119,9 @@ public void verifyProductAdd(String modelname, String itemtitle2, String itemdes
 	QtyField.sendKeys(Qty);
 	Thread.sleep(2000);
 	
-	Actions ac  = new Actions(driver);
-	ac.moveToElement(imageUploadbutton).click().build().perform();;
+//	ac  = new Actions(driver);
+//	ac.moveToElement(imageUploadbutton).click().build().perform();
+	Utils.actions(driver, imageUploadbutton);
 	Thread.sleep(2000);
 	
 	Robot rb = new Robot();
