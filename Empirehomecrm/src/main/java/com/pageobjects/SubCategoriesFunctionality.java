@@ -38,8 +38,11 @@ public class SubCategoriesFunctionality extends Basetest {
 	@FindBy (xpath = "//i[@class='fa fa-trash-o']")
 	WebElement DeleteButton;
 	
-	@FindBy (xpath = "//button[@class='swal-button swal-button--no']")
-	WebElement ConfirmingNoButton;
+	@FindBy (xpath = "//button[@class='swal-button swal-button--yes']")
+	WebElement ConfirmingYesButton;
+	
+	@FindBy (xpath = "//select[@name='mydatatable_length']")
+	WebElement DropDown;
 	
 	public SubCategoriesFunctionality () {
 		PageFactory.initElements(driver, this);
@@ -80,10 +83,16 @@ public class SubCategoriesFunctionality extends Basetest {
 		SubCategoryInputField.sendKeys(prop.getProperty("EditedSubCategoryName"));
 		SaveButton.click();
 		
+		SearchInputField.sendKeys(prop.getProperty("EditedSubCategoryName"));
+		Thread.sleep(2000);
+		
 		DeleteButton.click();
 		Thread.sleep(2000);
 		
-		ConfirmingNoButton.click();
+		ConfirmingYesButton.click();
+		Thread.sleep(2000);
+		
+		Utils.dropdowns(DropDown, 3);
 		Thread.sleep(2000);
 		
 		

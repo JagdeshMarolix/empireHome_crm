@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-26T13:40:42 IST" name="Default suite" finished-at="2023-10-26T13:41:23 IST" duration-ms="41468">
+  <suite started-at="2023-10-26T18:54:55 IST" name="Default suite" finished-at="2023-10-26T18:55:41 IST" duration-ms="46670">
     <groups>
     </groups>
-    <test started-at="2023-10-26T13:40:42 IST" name="Default test" finished-at="2023-10-26T13:41:23 IST" duration-ms="41468">
-      <class name="com.testcases.CategoriesTestCases">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.CategoriesTestCases@7c7b252e]" started-at="2023-10-26T13:40:42 IST" name="setup" finished-at="2023-10-26T13:40:50 IST" duration-ms="8045" status="PASS">
+    <test started-at="2023-10-26T18:54:55 IST" name="Default test" finished-at="2023-10-26T18:55:41 IST" duration-ms="46670">
+      <class name="com.testcases.SubCategoriesTestCases">
+        <test-method is-config="true" signature="Setup()[pri:0, instance:com.testcases.SubCategoriesTestCases@7c7b252e]" started-at="2023-10-26T18:54:55 IST" name="Setup" finished-at="2023-10-26T18:55:03 IST" duration-ms="8407" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="CategoriesFunctionalityValidation()[pri:0, instance:com.testcases.CategoriesTestCases@7c7b252e]" started-at="2023-10-26T13:40:50 IST" name="CategoriesFunctionalityValidation" finished-at="2023-10-26T13:41:23 IST" duration-ms="33329" status="PASS">
+        </test-method> <!-- Setup -->
+        <test-method signature="SubCategoriesFunctionalityValidation()[pri:0, instance:com.testcases.SubCategoriesTestCases@7c7b252e]" started-at="2023-10-26T18:55:03 IST" name="SubCategoriesFunctionalityValidation" finished-at="2023-10-26T18:55:41 IST" duration-ms="38158" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CategoriesFunctionalityValidation -->
-      </class> <!-- com.testcases.CategoriesTestCases -->
+        </test-method> <!-- SubCategoriesFunctionalityValidation -->
+      </class> <!-- com.testcases.SubCategoriesTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
