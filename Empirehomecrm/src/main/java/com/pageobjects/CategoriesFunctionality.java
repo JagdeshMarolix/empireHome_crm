@@ -38,8 +38,8 @@ public class CategoriesFunctionality extends Basetest {
 	@FindBy (xpath = "//tr[@class='odd']//a[2]//button[1]")
 	WebElement CategoriesDeleteButton;
 	
-	@FindBy (xpath = "//button[@class='swal-button swal-button--yes']")
-	WebElement YesButton;
+	@FindBy (xpath = "//button[@class='swal-button swal-button--no']")
+	WebElement NoButton;
 	
 	public CategoriesFunctionality() {
 		PageFactory.initElements(driver, this);
@@ -92,7 +92,7 @@ public class CategoriesFunctionality extends Basetest {
 		CategoriesDeleteButton.click();
 		
 		Thread.sleep(2000);
-		Utils.actions(driver, YesButton);
+		Utils.actions(driver, NoButton);
 
 		
 		

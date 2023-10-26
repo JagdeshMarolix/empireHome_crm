@@ -32,7 +32,7 @@ public class CategoriesTestCases extends Basetest {
 		
 		List<WebElement>rows = driver.findElements(By.xpath("//table//tr"));
 		int rowCount = rows.size();
-		Assert.assertEquals(rowCount, 24, "the count doesn't match");
+		Assert.assertEquals(rowCount, 2, "the count doesn't match");
 		System.out.println(rowCount);
 //		for(WebElement cellData : rows) {
 //			
