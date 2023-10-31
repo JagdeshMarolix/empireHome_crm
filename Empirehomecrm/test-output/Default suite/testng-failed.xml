@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testcases.LocationTestCases">
+      <class name="com.testcases.ConditionTestCases">
         <methods>
           <include name="setup"/>
-          <include name="deleteLocationValidation"/>
-          <include name="editLocationValidation"/>
+          <include name="DeleteCondition"/>
         </methods>
-      </class> <!-- com.testcases.LocationTestCases -->
+      </class> <!-- com.testcases.ConditionTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
