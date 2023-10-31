@@ -1,4 +1,7 @@
 package com.utils;
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.sql.Driver;
@@ -47,6 +50,16 @@ public static void actions(WebDriver driver, WebElement element) {
 public static void dropdowns(WebElement value, int index) {
 	Select sc = new Select(value);
 	sc.selectByIndex(index);
+}
+public static void am() throws Throwable {
+	Robot rt = new Robot();
+	rt.keyPress(KeyEvent.VK_A);
+	rt.keyRelease(KeyEvent.VK_A);
+}
+public static void pm() throws Throwable {
+	Robot rt = new Robot();
+	rt.keyPress(KeyEvent.VK_P);
+	rt.keyRelease(KeyEvent.VK_P);
 }
  
 }

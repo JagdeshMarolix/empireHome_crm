@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-31T14:16:01 IST" name="Default suite" finished-at="2023-10-31T14:16:49 IST" duration-ms="47686">
+  <suite started-at="2023-10-31T17:38:48 IST" name="Default suite" finished-at="2023-10-31T17:39:24 IST" duration-ms="35484">
     <groups>
     </groups>
-    <test started-at="2023-10-31T14:16:01 IST" name="Default test" finished-at="2023-10-31T14:16:49 IST" duration-ms="47686">
-      <class name="com.testcases.ConditionTestCases">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.ConditionTestCases@13c9d689]" started-at="2023-10-31T14:16:01 IST" name="setup" finished-at="2023-10-31T14:16:08 IST" duration-ms="6203" status="PASS">
+    <test started-at="2023-10-31T17:38:48 IST" name="Default test" finished-at="2023-10-31T17:39:24 IST" duration-ms="35484">
+      <class name="com.testcases.ShiftTestCases">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.ShiftTestCases@28701274]" started-at="2023-10-31T17:38:48 IST" name="setup" finished-at="2023-10-31T17:38:54 IST" duration-ms="5884" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="addNewCondition()[pri:1, instance:com.testcases.ConditionTestCases@13c9d689]" started-at="2023-10-31T14:16:08 IST" name="addNewCondition" finished-at="2023-10-31T14:16:27 IST" duration-ms="19186" status="PASS">
+        <test-method signature="addShift()[pri:1, instance:com.testcases.ShiftTestCases@28701274]" started-at="2023-10-31T17:38:54 IST" name="addShift" finished-at="2023-10-31T17:39:14 IST" duration-ms="19984" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addNewCondition -->
-        <test-method signature="EditCondition()[pri:2, instance:com.testcases.ConditionTestCases@13c9d689]" started-at="2023-10-31T14:16:27 IST" name="EditCondition" finished-at="2023-10-31T14:16:40 IST" duration-ms="12776" status="PASS">
+        </test-method> <!-- addShift -->
+        <test-method signature="DeleteShift()[pri:2, instance:com.testcases.ShiftTestCases@28701274]" started-at="2023-10-31T17:39:14 IST" name="DeleteShift" finished-at="2023-10-31T17:39:24 IST" duration-ms="9438" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- EditCondition -->
-        <test-method signature="DeleteCondition()[pri:3, instance:com.testcases.ConditionTestCases@13c9d689]" started-at="2023-10-31T14:16:40 IST" name="DeleteCondition" finished-at="2023-10-31T14:16:49 IST" duration-ms="9399" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DeleteCondition -->
-      </class> <!-- com.testcases.ConditionTestCases -->
+        </test-method> <!-- DeleteShift -->
+      </class> <!-- com.testcases.ShiftTestCases -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
