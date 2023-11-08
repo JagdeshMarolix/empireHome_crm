@@ -4,12 +4,16 @@ import java.awt.Robot;
 import java.awt.event.KeyEvent;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.sql.Driver;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -17,6 +21,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
 
 public class Utils {
+	static WebDriver driver;
 	
 	public static String[][] Customerdata(String sheetname) throws Throwable {
 		File file = new File("./src/main/java/com/testdata/EHcredentials2.xlsx");
@@ -42,11 +47,11 @@ public static void actions(WebDriver driver, WebElement element) {
 	Actions ac = new Actions(driver);
 	ac.moveToElement(element).click().perform();
 }
-//public static void scroll(driver) {
-//	JavascriptExecutor js = (JavascriptExecutor) driver;
-//	js.executeScript("window.scrollBy(0,250)");
-//	
-//}
+public static void scroll() {
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+	js.executeScript("window.scrollBy(0, 600)");
+	
+}
 public static void dropdowns(WebElement value, int index) {
 	Select sc = new Select(value);
 	sc.selectByIndex(index);
@@ -60,6 +65,13 @@ public static void pm() throws Throwable {
 	Robot rt = new Robot();
 	rt.keyPress(KeyEvent.VK_P);
 	rt.keyRelease(KeyEvent.VK_P);
+}
+public static void TakeScreenshot(WebDriver driver, String FilePath) throws Throwable {
+	TakesScreenshot ts = (TakesScreenshot) driver;
+	File Source = ts.getScreenshotAs(OutputType.FILE);
+	File Destination = new File(FilePath);
+	FileUtils.copyFile(Source, Destination);
+	
 }
  
 }

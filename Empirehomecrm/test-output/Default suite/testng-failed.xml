@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testcases.ShiftTestCases">
+      <class name="com.testcases.CompanyTestCases">
         <methods>
-          <include name="addShift"/>
+          <include name="editCompany"/>
           <include name="setup"/>
-          <include name="DeleteShift"/>
         </methods>
-      </class> <!-- com.testcases.ShiftTestCases -->
+      </class> <!-- com.testcases.CompanyTestCases -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

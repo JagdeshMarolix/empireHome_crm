@@ -7,13 +7,16 @@ import java.time.Duration;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.poi.util.Units;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.utils.EventListener;
 
 public class Basetest {
 
@@ -21,6 +24,8 @@ public class Basetest {
 	FileInputStream file;
 	public static WebDriver driver;
 //	protected ExtentReports extentreports;
+	public static EventFiringWebDriver e_driver;
+	public static EventListener listenerss;
 
 	public Basetest() {
 
@@ -58,10 +63,15 @@ public class Basetest {
 
 			driver = new FirefoxDriver();
 		}
+		e_driver = new EventFiringWebDriver(driver);
+		// Now create object of EventListerHandler to register it with EventFiringWebDriver
+		listenerss = new EventListener();
+		e_driver.register(listenerss);
+		driver = e_driver;
 		driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
+		driver.manage().timeouts().pageLoadTimeout(15, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.manage().deleteAllCookies();
 		//extentreports.flush();
 

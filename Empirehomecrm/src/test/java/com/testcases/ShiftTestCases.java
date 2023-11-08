@@ -41,7 +41,6 @@ public class ShiftTestCases extends Basetest {
 		int rowCount = rows.size();
 		System.out.println("Deleted row size is: " + rowCount);
 		Assert.assertEquals(rowCount, 24);
-		
 	}
 
 }
